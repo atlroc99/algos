@@ -15,8 +15,8 @@ import java.util.*;
 * */
 public class Anagram {
     public static void main(String[] args) {
-        String a = "banana1";
-        String b = "banana3";
+        String a = "Banana1";
+        String b = "banana1";
 
         boolean isAnagram = new Anagram().isAnagram(a, b);
         System.out.println(isAnagram);
@@ -32,9 +32,9 @@ public class Anagram {
             return false;
         }
 
-        char[] arr1 = val1.toCharArray();
+        char[] arr1 = val1.toLowerCase().toCharArray();
         Arrays.sort(arr1);
-        char[] arr2 = val2.toCharArray();
+        char[] arr2 = val2.toLowerCase().toCharArray();
         Arrays.sort(arr2);
 
         Map<Character, Integer> map1 = getCharCount(arr1);
